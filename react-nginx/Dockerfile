@@ -41,7 +41,7 @@ COPY --from=gloursdocker/docker / /
 CMD [ "npm", "start" ]
 
 # 2. For Nginx setup
-FROM nginx:alpine
+FROM nginx:1.29.5-alpine3.23
 
 # Copy config nginx
 COPY --from=build /app/.nginx/nginx.conf /etc/nginx/conf.d/default.conf
